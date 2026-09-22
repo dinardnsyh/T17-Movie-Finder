@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #faf7f2;
+  --color-surface: #fffdfb;
+  --color-ink: #211c19;
+  --color-ink-muted: #7a7168;
+  --color-line: #e6ddd2;
+  --color-accent: #7a2e2e;
+  --color-accent-soft: #f1e3df;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius: 3px;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-ink);
+}
+button { font-family: var(--font-body); cursor: pointer; }
+input { font-family: var(--font-body); }
+img { display: block; max-width: 100%; }
+a { color: inherit; }

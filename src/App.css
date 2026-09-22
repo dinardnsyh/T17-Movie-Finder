@@ -1,0 +1,143 @@
+.app {
+  min-height: 100%;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 2.5rem 2rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.navbar__mark {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.navbar__title {
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+}
+
+.navbar__tagline {
+  margin: 0 0 0 auto;
+  color: var(--color-ink-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- CONTENT ---------- */
+.app__content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+/* ---------- SEARCH BAR ---------- */
+.searchbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.75rem;
+}
+
+.searchbar__input {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+.searchbar__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.searchbar__button {
+  padding: 0.85rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: var(--color-surface);
+  transition: opacity 0.15s ease;
+}
+
+.searchbar__button:hover {
+  opacity: 0.88;
+}
+
+/* ---------- STATUS (loading / error) ---------- */
+.app__status {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--color-ink-muted);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.app__status--error {
+  color: var(--color-accent);
+}
+
+/* ---------- MOVIE GRID ---------- */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2rem 1.5rem;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card__poster-wrap {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-accent-soft);
+  margin-bottom: 0.75rem;
+}
+
+.movie-card__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-card__title {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.movie-card__year {
+  margin: 0.25rem 0 0;
+  color: var(--color-ink-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 2rem 1.25rem 1.25rem;
+  }
+  .navbar__tagline {
+    margin-left: 0;
+    width: 100%;
+    order: 3;
+  }
+  .app__content {
+    padding: 2rem 1.25rem 3rem;
+  }
+  .searchbar {
+    flex-direction: column;
+  }
+}
